@@ -91,6 +91,26 @@ function customSmartPooling() {
   return 'el futuro ya ha pasado';
 }
 
+function numberCurrency() {
+  const num = 103.7756476537;
+  return num.toLocaleString('es-ES', {
+    style: 'currency',
+    currency: 'EUR',
+    maximumFractionDigits: 2,
+    minimumFractionDigits: 2,
+    useGrouping: false,
+  });
+}
+
+function numberPerecentage() {
+  const num = 90.7756476537 / 100;
+  return num.toLocaleString('es-ES', {
+    style: 'percent',
+    maximumFractionDigits: 2,
+    minimumFractionDigits: 2,
+  });
+}
+
 export default function date() {
-  return monthYear;
+  return numberPerecentage();
 }
